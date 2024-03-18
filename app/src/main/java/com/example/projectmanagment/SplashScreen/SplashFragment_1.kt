@@ -1,11 +1,9 @@
-package com.example.projectmanagment
+package com.example.projectmanagment.SplashScreen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-
+import com.example.projectmanagment.R
 
 
 class SplashFragment_1 : Fragment(R.layout.fragment_splash_1) {

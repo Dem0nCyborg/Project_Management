@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#E91E63"
-    tools:context=".SplashFragment_2">
+    tools:context=".SplashScreen.SplashFragment_2">
 
     <Button
         android:id="@+id/btn_splsh_second"

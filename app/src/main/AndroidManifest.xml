@@ -13,8 +13,20 @@
         android:theme="@style/Theme.ProjectManagment"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreen"
-            android:exported="true" >
+            android:name=".Meetings"
+            android:exported="false" />
+        <activity
+            android:name=".UserData.Welcome"
+            android:exported="false" />
+        <activity
+            android:name=".UserData.Register"
+            android:exported="false" />
+        <activity
+            android:name=".UserData.Login"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen.SplashScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +35,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
