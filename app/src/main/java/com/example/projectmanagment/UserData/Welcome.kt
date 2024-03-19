@@ -1,5 +1,6 @@
 package com.example.projectmanagment.UserData
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -47,6 +48,10 @@ class Welcome : AppCompatActivity() {
 
         val currentUser = firebaseAuth.currentUser
         if (currentUser != null){
+            val userID = firebaseAuth.currentUser!!.uid
+            val sharedPreferences = applicationContext.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putString("userID",userID)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

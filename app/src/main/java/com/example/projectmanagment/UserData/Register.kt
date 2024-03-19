@@ -1,21 +1,27 @@
 package com.example.projectmanagment.UserData
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.projectmanagment.MainActivity
 import com.example.projectmanagment.R
 import com.example.projectmanagment.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
+import kotlin.random.Random
 
 class Register : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var database : DatabaseReference
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +34,8 @@ class Register : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val sharedPreferences = applicationContext.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
 
         firebaseAuth=FirebaseAuth.getInstance()
         binding.btnReister.setOnClickListener {
@@ -41,7 +49,13 @@ class Register : AppCompatActivity() {
 
             if(email.isNotEmpty() && username.isNotEmpty() && password.isNotEmpty() && confirmpassword.isNotEmpty()){
                 firebaseAuth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
-                    Toast.makeText(this,"Registration Successfull",Toast.LENGTH_SHORT).show()
+
+                    editor.putString("username",username)
+                    editor.putString("email",email)
+                    editor.putString("password",password)
+                    editor.putString("userID", Random.nextInt(1000,9999).toString()).toString()
+                    editor.apply()
+                    startActivity(Intent(this,MainActivity::class.java))
                     }
                 .addOnFailureListener {
                     Toast.makeText(this,"Registration Failed",Toast.LENGTH_SHORT).show()
@@ -54,4 +68,7 @@ class Register : AppCompatActivity() {
         }
 
     }
+
+
+
 }
