@@ -51,12 +51,19 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.storage.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation ("com.google.android.material:material:<version>")
 
 
     implementation ("com.github.ZEGOCLOUD:zego_uikit_prebuilt_video_conference_android:+")
+    implementation("com.github.ZEGOCLOUD:zego_uikit_signaling_plugin_android:+")
+    implementation("com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:+")
 
 
 }

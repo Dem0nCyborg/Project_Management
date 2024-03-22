@@ -7,4 +7,57 @@
     android:layout_height="match_parent"
     tools:context=".Storage.SharedData">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/selectFileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="25dp"
+        android:src="@drawable/baseline_add"
+        android:text="Select File"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/uriTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectFileBtn"
+        android:text="Selected File URI"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dwnTxt"
+        app:layout_constraintEnd_toStartOf="@+id/dwnTxt"
+        app:layout_constraintStart_toStartOf="@+id/selectFileBtn" />
+
+    <TextView
+        android:id="@+id/dwnTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/uriTxt"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="224dp"
+        android:text="Download URL"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/selectFileBtn"
+        app:layout_constraintTop_toTopOf="@+id/selectFileBtn" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="16dp"
+        android:numColumns="3"
+        android:padding="16dp"
+        android:verticalSpacing="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

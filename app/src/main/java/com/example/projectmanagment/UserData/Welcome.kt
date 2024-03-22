@@ -2,12 +2,14 @@ package com.example.projectmanagment.UserData
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.projectmanagment.MainActivity
+import com.example.projectmanagment.Projects.MainActivity
 import com.example.projectmanagment.R
 import com.example.projectmanagment.databinding.ActivityWelcomeBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -28,6 +30,12 @@ class Welcome : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Set the status bar color
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.dark)
+        }
+
 
         firebaseAuth=FirebaseAuth.getInstance()
 

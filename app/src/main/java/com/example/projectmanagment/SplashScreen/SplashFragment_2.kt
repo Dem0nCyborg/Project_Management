@@ -5,9 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.TextView
-import com.example.projectmanagment.MainActivity
 import com.example.projectmanagment.R
-import com.example.projectmanagment.UserData.Register
 import com.example.projectmanagment.UserData.Welcome
 
 
