@@ -16,7 +16,7 @@ Our app is designed to streamline project management processes by providing a co
 ## Screenshots
 
 [Screenshot 1]([path_to_screenshot_1.png](https://github.com/Dem0nCyborg/Project_Management/blob/main/Screenshot_20240322_130723.png) 
-![Screenshot 2](https://github.com/Dem0nCyborg/Project_Management/blob/main/image.png)
+[Screenshot 2](https://github.com/Dem0nCyborg/Project_Management/blob/main/image.png)
 
 
 ## Getting Started
