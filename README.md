@@ -1,4 +1,4 @@
-# Project Management App
+`# Project Management App
 
 Welcome to our project management app, developed during the HackHaven hackathon! 🚀
 
@@ -15,8 +15,11 @@ Our app is designed to streamline project management processes by providing a co
 
 ## Screenshots
 
-[Screenshot 1]([path_to_screenshot_1.png](https://github.com/Dem0nCyborg/Project_Management/blob/main/Screenshot_20240322_130723.png) 
-[Screenshot 2](https://github.com/Dem0nCyborg/Project_Management/blob/main/image.png)
+<!-- First image -->
+<img src="https://github.com/Dem0nCyborg/Project_Management/blob/main/Screenshot_20240322_130723.png" alt="Screenshot 1" width="400">
+
+<!-- Second image -->
+<img src="https://github.com/Dem0nCyborg/Project_Management/blob/main/image.png" alt="Screenshot 2" width="400">
 
 
 ## Getting Started
